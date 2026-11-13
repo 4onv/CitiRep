@@ -1,0 +1,15 @@
+[project]
+name = "citirep"
+version = "0.1.0"
+description = "Waterloo civic document ingestion and search API"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "python-multipart>=0.0.20,<1",
+  "httpx>=0.28,<1",
+  "beautifulsoup4>=4.13,<5",
+  "pypdf[crypto]>=6,<8",
+  "python-docx>=1.2,<2",
+  "fonttools>=4.60,<5",
+]
