@@ -2,7 +2,9 @@ import hashlib
 from contextlib import asynccontextmanager
 from pathlib import Path
 
-from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
+from fastapi import FastAPI, File, Form, HTTPException, Query, Request, UploadFile
+from fastapi.openapi.docs import get_swagger_ui_html
+from fastapi.responses import HTMLResponse
 from starlette.concurrency import run_in_threadpool
 
 from .db import connect, decode, initialize, save
@@ -16,8 +18,22 @@ async def lifespan(app):
     yield
 
 
-app = FastAPI(title="CitiRep API", version="0.1.0", lifespan=lifespan,
+app = FastAPI(title="CitiRep API", version="0.1.0", lifespan=lifespan, docs_url=None,
               description="Waterloo documents, public uploads, passage search and source history.")
+
+
+@app.get("/docs", include_in_schema=False)
+def api_docs(request: Request):
+    root_path = request.scope.get("root_path", "").rstrip("/")
+    page = get_swagger_ui_html(
+        openapi_url=root_path + app.openapi_url,
+        title=app.title + " - Swagger UI",
+    )
+    # Hide the schema download label while keeping interactive API checks working.
+    html = page.body.decode().replace(
+        "</head>", "<style>.swagger-ui .info .url { display: none; }</style></head>"
+    )
+    return HTMLResponse(html)
 
 
 @app.get("/health")
