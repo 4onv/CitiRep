@@ -1,3 +1,4 @@
+import { PUBLIC_DEMO, demoApi } from "./demo";
 export type {
   Related,
   Document,
@@ -7,6 +8,7 @@ export type {
 } from "./types/api";
 
 export async function api<T>(path: string, init?: RequestInit): Promise<T> {
+  if (PUBLIC_DEMO) return demoApi<T>(path, init);
   const response = await fetch(path, init);
   if (!response.ok) {
     let message = `Request failed (${response.status})`;

@@ -54,7 +54,7 @@ export default function SearchPage({
       .catch((e) => {
         if (e.name !== "AbortError")
           setError(
-            "Could not load documents. Make sure the backend is running on port 8000.",
+            "Could not load documents. Check your connection and try again.",
           );
       })
       .finally(() => {

@@ -10,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 import "./Layout.css";
+import { PUBLIC_DEMO } from "../demo";
 
 export default function Layout({
   path,
@@ -116,6 +117,7 @@ export default function Layout({
         </nav>
       </div>
       <main id="main" tabIndex={-1}>
+        {PUBLIC_DEMO && <p className="demo-notice">Public browsing demo · 417 records · November 12, 2026 snapshot. Check original sources for current notices. <a href="https://github.com/4onv/CitiRep">Code</a></p>}
         {children}
       </main>
       <footer>

@@ -1,5 +1,6 @@
 import LookupBanner from "../components/LookupBanner";
 import "./WelcomePage.css";
+import { PUBLIC_DEMO } from "../demo";
 
 export default function Welcome() {
   return (
@@ -21,9 +22,9 @@ export default function Welcome() {
           </article>
           <article className="welcome-card staff">
             <h2>Municipal users</h2>
-            <p>Submit agendas, minutes and staff reports. Login required.</p>
+            <p>{PUBLIC_DEMO ? "Explore the document upload workflow in our interactive prototype." : "Submit agendas, minutes and staff reports. Login required."}</p>
             <a className="button outline" href="#/municipal">
-              Staff login
+              {PUBLIC_DEMO ? "Upload workflow" : "Staff login"}
             </a>
           </article>
         </div>

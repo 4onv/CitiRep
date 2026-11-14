@@ -19,6 +19,8 @@ import PlacesPage from "./pages/PlacesPage";
 import UpdatesPage from "./pages/UpdatesPage";
 import ParticipationPage from "./pages/ParticipationPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import DemoUploadPage from "./pages/DemoUploadPage";
+import { PUBLIC_DEMO } from "./demo";
 
 const titles: Record<string, string> = {
   "/": "Welcome",
@@ -89,7 +91,7 @@ export default function App() {
         );
         break;
       case "/upload":
-        page = <UploadPage />;
+        page = PUBLIC_DEMO ? <DemoUploadPage /> : <UploadPage />;
         break;
       case "/saved":
         page = <SavedPage saved={saved} toggle={toggle} />;
@@ -111,7 +113,7 @@ export default function App() {
         );
         break;
       case "/municipal":
-        page = <MunicipalPage />;
+        page = PUBLIC_DEMO ? <DemoUploadPage /> : <MunicipalPage />;
         break;
       case "/events":
         page = <EventsPage />;
