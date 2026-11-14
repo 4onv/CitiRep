@@ -1,0 +1,23 @@
+.updates-actions {
+  margin: 0 0 28px;
+}
+.update-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.update-row h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.update-row p {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+@media (max-width: 650px) {
+  .update-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

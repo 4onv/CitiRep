@@ -1,0 +1,26 @@
+.upload-review {
+  max-width: 800px;
+}
+.upload-review blockquote {
+  margin: 0 0 22px;
+  padding: 18px;
+  background: #fff7d9;
+  border: 1px solid var(--line);
+}
+.upload-review details {
+  margin: 24px 0;
+}
+.upload-review summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 10px 0;
+}
+.preview-text {
+  max-height: 420px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.8;
+  padding: 18px;
+  border: 1px solid var(--line);
+}

@@ -1,0 +1,10 @@
+.passage {
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+.passage p,
+.source-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.9;
+}

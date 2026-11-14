@@ -1,0 +1,11 @@
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 650px) {
+  .help-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

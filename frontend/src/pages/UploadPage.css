@@ -1,0 +1,65 @@
+.steps {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  font-size: 12px;
+}
+.steps b {
+  font-weight: 400;
+}
+.steps .current {
+  background: var(--yellow);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+.upload-form > input {
+  margin-bottom: 25px;
+}
+.dropzone {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 28px 20px;
+  margin-bottom: 26px;
+}
+.dropzone > svg {
+  margin-bottom: 16px;
+}
+.dropzone h2 {
+  overflow-wrap: anywhere;
+}
+.dropzone p {
+  font-size: 12px;
+}
+.file-label {
+  position: relative;
+  cursor: pointer;
+}
+.file-label input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.file-label:focus-within {
+  outline: 3px solid #225ca9;
+  outline-offset: 3px;
+}
+.file-size {
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.upload-submit {
+  margin-top: 25px;
+}
+.success > svg {
+  margin-bottom: 20px;
+  color: #28734e;
+}
+@media (max-width: 650px) {
+  .steps {
+    gap: 15px;
+  }
+}

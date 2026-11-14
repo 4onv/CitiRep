@@ -1,0 +1,36 @@
+.summary {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.timeline {
+  border-left: 1px solid var(--navy);
+  margin: 25px 0 0 8px;
+  padding-left: 24px;
+}
+.timeline > div {
+  position: relative;
+  margin-bottom: 24px;
+}
+.timeline > div:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: white;
+  border: 1px solid var(--navy);
+  border-radius: 50%;
+  position: absolute;
+  left: -30px;
+  top: 5px;
+}
+.timeline > div:first-child:before {
+  background: var(--navy);
+}
+.timeline span {
+  font-size: 11px;
+}
+.timeline h3 {
+  margin: 7px 0;
+}
+.timeline p {
+  font-size: 12px;
+}

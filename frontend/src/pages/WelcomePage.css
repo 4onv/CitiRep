@@ -1,0 +1,63 @@
+.welcome {
+  text-align: center;
+  padding: clamp(40px, 6vw, 72px) 0 24px;
+}
+.welcome h1 {
+  font-size: 30px;
+  margin: 0 0 20px;
+}
+.welcome > p {
+  font-size: 15px;
+}
+.welcome-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 850px;
+  margin: 35px auto 0;
+  text-align: left;
+}
+.welcome-card {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 28px;
+  background: #fff7d9;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+.welcome-card.staff {
+  background: #e7effb;
+}
+.welcome-card h2 {
+  font-size: 20px;
+  margin: 0 0 24px;
+}
+.welcome-card p {
+  font-size: 16px;
+  max-width: 310px;
+  margin: 0 0 20px;
+}
+.welcome-card .button {
+  width: 100%;
+  margin-top: auto;
+}
+@media (max-width: 650px) {
+  .welcome {
+    padding: 36px 0 16px;
+  }
+  .welcome h1 {
+    font-size: 27px;
+  }
+  .welcome-cards {
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+  .welcome-card h2 {
+    margin-bottom: 28px;
+  }
+  .welcome-card {
+    min-height: 210px;
+    padding: 24px;
+  }
+}

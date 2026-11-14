@@ -1,0 +1,42 @@
+.document-card {
+  position: relative;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 26px;
+}
+.document-icon {
+  display: none;
+}
+.document-content {
+  padding-right: 38px;
+  min-width: 0;
+}
+.document-card h2 {
+  font-size: 19px;
+  margin: 0 0 9px;
+}
+.document-card .card-meta {
+  margin: 0 0 12px;
+}
+.excerpt {
+  font-size: 15px;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.save-button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+@media (max-width: 650px) {
+  .document-card {
+    padding: 20px;
+  }
+  .document-card h2 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,30 @@
+.document-tabs {
+  display: flex;
+  margin-bottom: 28px;
+  border: 1px solid var(--line);
+}
+.document-tabs button {
+  flex: 1;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  font-size: 13px;
+}
+.document-tabs button:last-child {
+  border-right: 0;
+}
+.document-tabs .selected {
+  background: var(--yellow);
+}
+@media (max-width: 650px) {
+  .document-tabs button {
+    font-size: 13px;
+    padding: 12px 6px;
+    min-width: 0;
+  }
+}
+@media print {
+  .document-tabs {
+    display: none;
+  }
+}

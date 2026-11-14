@@ -1,0 +1,45 @@
+.lookup-banner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid var(--line);
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.banner-icon {
+  color: #547caf;
+}
+.lookup-banner strong {
+  font-size: 16px;
+  font-weight: 400;
+}
+.lookup-banner p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+.lookup-banner .button {
+  margin-left: auto;
+  min-width: 210px;
+  font-size: 13px;
+}
+@media (max-width: 760px) {
+  .lookup-banner {
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 12px;
+  }
+  .lookup-banner > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+  }
+  .lookup-banner strong {
+    font-size: 16px;
+  }
+  .lookup-banner .button {
+    width: 100%;
+    margin: 0;
+    min-width: 0;
+  }
+}
